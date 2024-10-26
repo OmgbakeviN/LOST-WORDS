@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOST WORDS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(#2D2B7F, #EA5C94);  
+            background-size: 200% 200%; 
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        /* Style des cases de lettres */
+        .lettre-box {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 2px solid white;
+            margin: 5px;
+            font-size: 24px;
+            text-transform: uppercase;
+            line-height: 40px;
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+
+        /* Zone du formulaire et des lettres */
+        #form-lettre {
+            margin-top: 20px;
+        }
+
+        #pendu {
+            margin-top: 20px;
+            font-size: 24px;
+            color: red;
+        }
+
+        .btn-rejouer {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: linear-gradient(90deg, green, blue);
+            animation: gradient-animation 1s ease infinite;
+            background-size: 200% 200%;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        @keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Position de départ */
+    }
+    50% {
+        background-position: 100% 50%; /* Milieu de l'animation */
+    }
+    100% {
+        background-position: 0% 50%; /* Retour à la position de départ */
+    }
+}
+
+        .btn-rejouer:hover {
+            background-color: #0056b3;
+        }
+
+        #message {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #lettre{
+            display: inline-block;
+            width: 70px;
+            height: 40px;
+            border: 2px solid white;
+            margin: 5px;
+            font-size: 24px;
+            text-transform: uppercase;
+            line-height: 40px;
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>LOST WORDS</h1>
+        
+        <!-- Zone où les lettres seront affichées sous forme de boîtes -->
+        <div id="mot-cache">
+            <!-- Les lettres/tirets du mot caché seront insérées ici -->
+        </div>
+
+        <!-- Formulaire pour proposer une lettre -->
+        <div id="form-lettre">
+            <label for="lettre"><strong>Entrez une lettre :</strong></label>
+            <input type="text" id="lettre" maxlength="1">
+            <button id="btn-proposer"><strong>Proposer</strong></button>
+        </div>
+
+        <!-- Zone pour afficher les erreurs du pendu -->
+        <div id="pendu"><b>ERREURS: 0</b></div>
+
+        <!-- Message de victoire ou défaite -->
+        <div id="message"></div>
+
+        <!-- Bouton pour rejouer (sera caché au début) -->
+        <a href="jeu.html" class="btn-rejouer" id="btn-rejouer">Rejouer</a>
+    </div>
+    <footer>
+        <p style="color: white;">Contactez-nous : <a href="mailto:kevinomgba1@gmail.com" style="color: whitesmoke;"><b>kevinomgba1@gmail.com</b></a></p>
+        <p style="color: whitesmoke;">Contactez-nous : <a href="tel:+237656051668" style="color: whitesmoke;"><b>+237 656 051 668</b></a></p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
